@@ -1,0 +1,72 @@
+/* ================================= 
+  Button Transitions
+==================================== */
+.button {
+  opacity: 0;
+  transition: opacity 300ms ease-out 200ms, background 400ms ease-out 300ms, box-shadow 500ms ease-out 0;
+}
+.button:hover {
+  background: rgba(74, 137, 202, 1);
+  box-shadow: 0 0 0 3px rgba(255,255,255, .7);
+}
+.photo-overlay:hover .button {
+  opacity: 1;
+} 
+.btn-icon {
+  transition-property: opacity, left;
+  transition-duration: .5s;
+  transition-delay: .3s;
+  transition-timing-function: ease-out;
+}
+.button:hover .btn-icon {
+  opacity: 1;
+  left: 80%;
+
+}
+
+/* ================================= 
+  Photo Overlay Transitions
+==================================== */
+.photo-overlay {
+  opacity: 0;
+  transition: .5s;
+}
+.photo-overlay:hover {
+  opacity: 1;
+}
+
+/* ================================= 
+  Image Transforms & Transitions
+==================================== */
+
+/* -- Row 1 --------------*/
+img {
+  transition: transform .5s;
+}
+
+img:hover {
+  transform:translateY(100%);
+}
+
+/* -- Row 2 --------------*/
+.photo img {
+  transform-origin: 0 0;
+}
+.photo:hover img {
+  transform: scale(1.2);
+}
+
+/* -- Row 3 --------------*/
+.slide .photo-overlay,
+.slide img {
+  transition: transform .6cs ease-out;
+}
+.slide .photo-overlay {
+  transform: translateX(-100%);
+}
+.slide:hover .photo-overlay {
+  transform: translateX(0);
+}
+.slide:hover img {
+  transform: translateX(100%);
+}
